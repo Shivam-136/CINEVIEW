@@ -35,7 +35,7 @@ const FavoritesPage = () => {
         </div>
 
         {/* Empty State */}
-        <div className="mt-10 bg-[#071226] border border-slate-800 rounded-[35px] min-h-[200px] flex flex-col items-center justify-center">
+        <div className="mt-10 bg-[#071226] border border-slate-800 rounded-[35px] min-h-50 flex flex-col items-center justify-center">
 
           <h2 className=" mb-3 font-bold ">
             Your list is empty.
