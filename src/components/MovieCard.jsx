@@ -7,7 +7,7 @@ const MovieCard = ({ movie, addToFavorites }) => {
       <img
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
-        className="w-full h-[380px] object-cover"
+        className="w-full h-95 object-cover"
       />
 
       <div className="p-4">
@@ -15,7 +15,6 @@ const MovieCard = ({ movie, addToFavorites }) => {
         <h2 className="text-lg font-bold">
           {movie.title}
         </h2>
-
         <p className="text-slate-400 mt-2">
           ⭐ {movie.vote_average}
         </p>
@@ -26,7 +25,7 @@ const MovieCard = ({ movie, addToFavorites }) => {
 
         <button
           onClick={() => addToFavorites(movie)}
-          className="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold"
+          className="w-full mt-4 py-3 rounded-xl bg-linear-to-r from-orange-500 to-red-500 text-white font-semibold"
         >
           Add To Favorites
         </button>
