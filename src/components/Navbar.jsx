@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-xl bg-linear-to-r  from-orange-500 to-red-500 flex items-center justify-center text-white font-bold">
             🎬
           </div>
-
+                                       
           <div>
             <h1 className="text-white font-bold text-xl">
               CINEVIEW
