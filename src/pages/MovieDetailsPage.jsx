@@ -5,7 +5,6 @@ import movies from "../moviesJson.js/movies";
 const MovieDetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
   const movie = movies.find(
     (item) => String(item.id) === String(id)
   );
