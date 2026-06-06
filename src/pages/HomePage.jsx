@@ -1,8 +1,9 @@
 import React from "react";
-import movies from "../moviesJson.js/movies"
+import movies from "../moviesJson.js/movies";
 import MovieCard from "../components/MovieCard";
 
 const HomePage = () => {
+
   const addToFavorites = (movie) => {
     const favorites =
       JSON.parse(localStorage.getItem("favorites")) || [];
@@ -23,41 +24,34 @@ const HomePage = () => {
     }
   };
 
-  return (  
+  return (
     <div className="min-h-screen bg-[#020817] text-white px-6 py-6">
 
       <div className="max-w-7xl mx-auto">
 
-        {/* Hero */}
+        {/* Header */}
 
-        <div className="bg-[#071226] border border-slate-800 rounded-[35px] p-12">
+        <div className="flex justify-between items-end mb-8">
 
-          <p className="text-orange-400 uppercase tracking-[8px] text-sm">
-            Featured Collection
-          </p>
+          <div>
+            <h2 className="text-3xl font-bold">
+              Trending Movies
+            </h2>
 
-          <h1 className="text-6xl font-black mt-6">
-            CINEMATIC STORIES,
-            <br />
-            LIVE NOW
-          </h1>
+            <p className="text-slate-400 mt-2">
+              Browse the movies people are watching around the globe.
+            </p>
+          </div>
 
-          <p className="text-slate-400 text-xl mt-6">
-            Explore trending movies and save
-            your favorites.
+          <p className="text-slate-500 text-sm">
+            Updated Daily
           </p>
 
         </div>
 
-        {/* Movies */}
+        {/* Movies Grid */}
 
-        <div className="mt-12 mb-6">
-          <h2 className="text-4xl font-bold">
-            Trending Movies
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
           {movies.map((movie) => (
             <MovieCard

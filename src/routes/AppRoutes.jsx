@@ -7,6 +7,7 @@ import AuthPage from "../pages/AuthPage";
 import HomePage from "../pages/HomePage";
 import FavoritesPage from "../pages/FavoritesPage";
 import ProfilePage from "../pages/ProfilePage";
+import MovieDetailsPage from "../pages/MovieDetailsPage";
 
 import MainLayout from "../layouts/MainLayout";
 import ProtectedRoute from "../components/ProtectedRoute";
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <AuthPage />,
   },
+
   {
     path: "/",
     element: <MainLayout />,
@@ -24,14 +26,21 @@ const router = createBrowserRouter([
         path: "home",
         element: <HomePage />,
       },
+
       {
         path: "favorites",
         element: <FavoritesPage />,
       },
+
+      {
+        path: "movie/:id",
+        element: <MovieDetailsPage />,
+      },
+
       {
         path: "profile",
         element: (
-          <ProtectedRoute>
+          <ProtectedRoute>      
             <ProfilePage />
           </ProtectedRoute>
         ),
